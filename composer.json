@@ -1,0 +1,43 @@
+{
+    "name": "vooyd/backup",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "author name",
+            "email": "author email",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/vooyd/backup",
+    "keywords": ["Laravel", "Backup"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vooyd\\Backup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vooyd\\Backup\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vooyd\\Backup\\BackupServiceProvider"
+            ],
+            "aliases": {
+                "Backup": "Vooyd\\Backup\\Facades\\Backup"
+            }
+        }
+    }
+}
